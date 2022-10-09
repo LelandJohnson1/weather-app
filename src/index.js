@@ -1,24 +1,24 @@
-/* eslint-disable linebreak-style */
 import './style.css';
 import './normalize.css';
+import './dom.js';
 import './data.js';
 
-document.querySelector('body').innerHTML = 1100101010;
-const dom_items = (() => {
-	const city = document.querySelector('header div');
-	const weather_symbol = document.querySelector('header img');
-	const loading_area = document.querySelector('main');
-	const weather_data = document.querySelectorAll('section+section p');
-	const weather_data_arr = [...weather_data];
-	const weather_input = document.querySelector('.weather_input');
+import dom_items from './dom.js';
+import temp from './data.js';
 
-	return {
-		city,
-		weather_symbol,
-		loading_area,
-		weather_data_arr,
-		weather_input,
-	};
-})();
+const { data } = temp();
+console.log(data);
 
-export default dom_items;
+dom_items.submit_button.addEventListener(
+	'click',
+
+	async () => {
+		let city = dom_items.weather_input.value;
+		console.log(city);
+
+		const temp2 = await data(
+			`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3341726c87ea59ba818ce1372f50d4fe`
+		);
+		console.log(temp2);
+	}
+);

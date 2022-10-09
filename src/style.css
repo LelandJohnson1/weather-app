@@ -1,0 +1,90 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{background-image: url('https://site.whennow.com/wp-content/uploads/2016/05/rain-image.jpg');
+    background-size: auto;
+    }
+
+.progress_container{
+
+        width: 75%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 15rem;
+        display: none;
+    
+}
+
+.progress_bar{
+
+    background-color: black;
+    width: 100%;
+    height: 1rem;
+    }
+
+.loading_color{
+
+    background-color: blue;
+    width: 0%;
+    height: 1rem;
+
+}
+
+.container{
+
+    
+    background-color: blue;
+    width: 75%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+
+}
+
+header{
+
+    background-color: brown;
+    width:100%;
+    
+}
+
+
+/*1st section*/
+main section:first-child {
+    border-right: 0.2rem solid red; 
+    width:44%;
+    background-color: pink;
+    display: inline-block;
+}
+
+/*2nd section*/
+section+section{
+
+    width:50%;
+    background-color: aliceblue;
+    display: inline-block;
+    
+}
+
+.input_container{ 
+    
+    width:14rem;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.weather_input {
+
+    width:100%;
+    border: 0.2rem solid white;
+    background-color: rgba(255, 255, 255, 30%);
+    
+}
+
+
