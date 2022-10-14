@@ -14,7 +14,7 @@ body{background-image: url('https://site.whennow.com/wp-content/uploads/2016/05/
         width: 75%;
         margin-left:auto;
         margin-right:auto;
-        margin-top: 15rem;
+        margin-top: 7rem;
         display: none;
     
 }
@@ -29,19 +29,18 @@ body{background-image: url('https://site.whennow.com/wp-content/uploads/2016/05/
 .loading_color{
 
     background-color: blue;
-    width: 0%;
+    width: 0;
     height: 1rem;
 
 }
 
 .container{
 
-    
-    background-color: blue;
+    background-color: white;
     width: 75%;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 7rem;
+    margin-top: 9rem;
     margin-bottom: 2rem;
 
 }
