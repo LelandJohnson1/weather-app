@@ -2,27 +2,35 @@ import dom_items from './dom.js';
 
 console.log(dom_items);
 
-const data_conversion = (url) => {
+const data_conversion = () => {
 	let isloading = true;
 	let chunks = [];
 	let results = null;
 	let error = null;
 
-	const data = async (url) => {
+	const data = async (url, pass) => {
 		resetVars();
 		isloading = true;
-		dom_items.progress_container.style.display = 'block';
-		dom_items.loading_area.setAttribute('style', 'margin-top:0;');
-		dom_items.loading_area.style.opacity = 0.4;
-		dom_items.weather_input.value = '';
+
+		if (pass != true) {
+			dom_items.progress_container.style.display = 'block';
+			dom_items.loading_area.setAttribute('style', 'margin-top:0;');
+			dom_items.loading_area.style.opacity = 0.4;
+			dom_items.weather_input.value = '';
+		}
 
 		try {
 			const response = await fetch(url, { mode: 'cors' });
 
 			if (response.status >= 200 && response.status < 300) {
-				results = await processChunk(response);
-				//you can use parse because results is not a promise;
-				return JSON.parse(results);
+				if (pass == true) {
+					results = await response.json();
+					return await results;
+				} else {
+					results = await processChunk(response);
+					//you can use parse because results is not a promise;
+					return JSON.parse(results);
+				}
 			} else {
 				throw response.statusText;
 			}

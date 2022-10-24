@@ -2,11 +2,29 @@
 *{
     margin: 0;
     padding: 0;
-
+    color: white;
+    line-height: 2rem;
+    text-shadow: 0.3rem 0.2rem 3px #000000;
+    
 }
 
-body{background-image: url('https://site.whennow.com/wp-content/uploads/2016/05/rain-image.jpg');
+
+@font-face {
+    font-family: 'Roboto_thin';
+    src: url(Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto_regular';
+    src: url(Roboto-Regular.ttf);
+}
+
+
+
+body{
     background-size: auto;
+    background-repeat: no-repeat;
+    background-position: left;
     }
 
 .progress_container{
@@ -14,7 +32,7 @@ body{background-image: url('https://site.whennow.com/wp-content/uploads/2016/05/
         width: 75%;
         margin-left:auto;
         margin-right:auto;
-        margin-top: 7rem;
+        margin-top: 3rem;
         display: none;
     
 }
@@ -36,43 +54,70 @@ body{background-image: url('https://site.whennow.com/wp-content/uploads/2016/05/
 
 .container{
 
-    background-color: white;
-    width: 75%;
+    width: 90%;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 9rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-bottom: 0.2rem;
+
 
 }
 
 header{
-
-    background-color: brown;
     width:100%;
-    
+    border-bottom: 0.1rem solid rgb(255, 255, 255); 
+    font-size: 2.3rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
 }
 
 
+/*City Text*/
+header div{
+
+    text-align: center;
+    font-family: 'Roboto_thin';
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 3.2rem;
+
+}
+
+header span{
+    font-size: 3.5rem;
+    text-align: center;
+    display: none;
+}
+
+
+main{background-color: rgba(24, 23, 23, 0.055);
+border-radius: 1.5rem;}
+
 /*1st section*/
 main section:first-child {
-    border-right: 0.2rem solid red; 
+    font-family: 'Roboto_regular';
+    border-right: 0.1rem solid rgb(255, 255, 255); 
     width:44%;
-    background-color: pink;
     display: inline-block;
+    box-sizing: border-box;
+    
 }
 
 /*2nd section*/
 section+section{
-
+    font-family: 'Roboto_regular';
     width:50%;
-    background-color: aliceblue;
     display: inline-block;
-    
+
 }
 
 .input_container{ 
     
-    width:14rem;
+    width:15rem;
     margin-left: auto;
     margin-right: auto;
 
@@ -80,10 +125,69 @@ section+section{
 
 .weather_input {
 
+    font-family: 'Roboto_regular';
+    font-size: 0.9rem;
     width:100%;
-    border: 0.2rem solid white;
-    background-color: rgba(255, 255, 255, 30%);
+    border: 0.1rem solid white;
+    border-radius: 1rem;
+    background-color: rgba(24, 23, 23, 0.247);
+    margin-bottom: 0.8rem;
+    outline: none;
     
 }
 
+
+
+button[type='submit']{
+    font-family: 'Roboto_regular';
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    width:5rem;
+    background-color: none;
+    background-color: rgba(24, 23, 23, 0.87);
+
+}
+
+
+
+
+@media screen and (min-width:375px){
+
+    body{background-size: cover;}
+
+    .container{padding-top: 0.4rem;}
+
+    .input_container{ 
+    
+        width:20rem;
+        margin-top: 0.8rem;
+    
+    }
+
+    .weather_input {
+
+        height: 1.5rem;
+        
+    }
+  
+    
+    button[type='submit']{
+       width:7rem;
+       height: 2rem;
+       font-size: 1.2rem;
+    
+    }
+
+    
+    main section{
+        font-size: 1.1rem;
+
+    }
+}
 
